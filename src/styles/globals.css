@@ -28,6 +28,7 @@
   --c-bg: #fff;
   --c-scrollbar: #eee;
   --c-scrollbar-hover: #bbb;
+  /* #endregion  /**======== Primary Color =========== */
 }
 
 html.dark {
@@ -37,9 +38,70 @@ html.dark {
 }
 
 @layer base {
+  /* #region  /**=========== Default Typography =========== */
+  h1,
+  .h1 {
+    @apply text-4xl font-bold;
+  }
+
+  h2,
+  .h2 {
+    @apply text-3xl font-bold;
+  }
+
+  h3,
+  .h3 {
+    @apply text-2xl font-bold;
+  }
+
+  h4,
+  .h4 {
+    @apply text-lg font-bold;
+  }
+
+  body,
+  .body {
+    @apply text-base;
+  }
+  /* #endregion  /**======== Default Typography =========== */
+
   .layout {
     max-width: 1400px;
     @apply mx-auto w-full;
+  }
+
+  .bg-dark a.custom-link {
+    @apply border-gray-200 hover:border-gray-200/0;
+  }
+
+  /* Class to adjust with sticky footer */
+  .min-h-main {
+    @apply min-h-[calc(100vh-56px)];
+  }
+}
+
+@layer utilities {
+  .animated-underline {
+    background-image: linear-gradient(#33333300, #33333300),
+      linear-gradient(
+        to right,
+        var(--color-primary-400),
+        var(--color-primary-500)
+      );
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .animated-underline {
+      transition: 0.3s ease;
+      transition-property: background-size, color, background-color,
+        border-color;
+    }
+  }
+  .animated-underline:hover,
+  .animated-underline:focus-visible {
+    background-size: 0 2px, 100% 2px;
   }
 }
 
@@ -72,6 +134,11 @@ html.dark {
 }
 .fade-in-start [data-fade='8'] {
   transition-delay: 800ms;
+}
+
+.animate-shadow {
+  @apply after:absolute after:inset-0 after:z-[-1] after:opacity-0 after:transition-opacity hover:after:opacity-100;
+  @apply after:shadow-md dark:after:shadow-none;
 }
 
 ::-webkit-scrollbar {

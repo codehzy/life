@@ -3,6 +3,8 @@ import React, { memo, useMemo } from 'react'
 import HeaderNav from './HeaderNav';
 import Icon from './Icon';
 import { useWindowScroll } from 'react-use';
+import UnstyledLink from '../links/UnstyledLink';
+import { VscHome } from 'react-icons/vsc';
 
 
 const Header = memo(() => {
@@ -22,6 +24,9 @@ const Header = memo(() => {
             )}>
             <section className='layout'>
                 <div className='flex mx-8 h-[60px] items-center justify-between leading-[60px]'>
+                    <UnstyledLink href='/' className='hidden text-[22px] mb:inline'>
+                        <VscHome />
+                    </UnstyledLink>
                     <HeaderNav />
                     <Icon />
                 </div>
