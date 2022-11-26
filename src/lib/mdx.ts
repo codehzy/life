@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { readdirSync, readFileSync } from 'fs';
 import matter from 'gray-matter';
 import { bundleMDX } from 'mdx-bundler';

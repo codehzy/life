@@ -28,7 +28,7 @@ export default function ProjectsPage() {
             >
               <p className='text-[32px]'>Projects</p>
               <p className='mb-[32px] italic opacity-50'>
-                Showcase of my projects on front-end development that I'm proud
+                Showcase of my projects on front-end development that I am proud
                 of.
               </p>
               {projects?.map((project, index) => (
