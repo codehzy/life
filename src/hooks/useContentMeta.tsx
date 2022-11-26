@@ -1,5 +1,5 @@
 import axios from 'axios';
-import debounce from 'lodash/debounce';
+import { debounce } from 'lodash';
 import * as React from 'react';
 import useSWR from 'swr';
 

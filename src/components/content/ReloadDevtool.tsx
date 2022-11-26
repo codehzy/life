@@ -10,7 +10,7 @@ export default function ReloadDevtool() {
   const router = useRouter();
 
   return !isProd ? (
-    <ButtonLink href={router.asPath} className='fixed bottom-4 left-4'>
+    <ButtonLink href={router.asPath} className='fixed bottom-4 left-4 bg-primary-600'>
       <HiRefresh />
     </ButtonLink>
   ) : null;
