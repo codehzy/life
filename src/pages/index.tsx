@@ -1,6 +1,7 @@
 import Layout from '@/components/layout/Layout';
 import clsxm from '@/lib/clsxm';
 import useLoaded from '@/hooks/useLoaded';
+import Seo from '@/components/Seo';
 
 export default function Home() {
   const isLoaded = useLoaded();
@@ -8,6 +9,7 @@ export default function Home() {
   return (
     <>
       <Layout>
+        <Seo />
         <main>
           <section className={clsxm(isLoaded && 'fade-in-start')}>
             <div className='mt-[120px]  text-left tablet:mt-[80px] mb:mt-[40px]'>

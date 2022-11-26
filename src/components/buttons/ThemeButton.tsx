@@ -1,20 +1,23 @@
-import { FiSunrise, FiSunset } from 'react-icons/fi';
+import clsx from 'clsx';
 import { useTheme } from 'next-themes';
+import * as React from 'react';
+import { FiMoon, FiSun } from 'react-icons/fi';
 
-const ThemeButton = () => {
-    const { theme, setTheme } = useTheme();
+import useLoaded from '@/hooks/useLoaded';
 
-    const changeTheme = () => {
-        setTheme(theme === 'light' ? 'dark' : 'light');
-    }
+type ThemeButtonProps = React.ComponentPropsWithoutRef<'button'>;
 
-    return (
-        <button onClick={changeTheme}>
-            {theme === 'light' ? <FiSunrise /> : <FiSunset />}
-        </button>
-    )
+export default function ThemeButton({ className, ...rest }: ThemeButtonProps) {
+  const { theme, setTheme } = useTheme();
+  const isLoaded = useLoaded();
+
+  return (
+    <button
+      className={clsx(className)}
+      {...rest}
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+    >
+      {theme === 'light' && isLoaded ? <FiMoon /> : <FiSun />}
+    </button>
+  );
 }
-
-ThemeButton.displayName = 'ThemeButton';
-
-export default ThemeButton
