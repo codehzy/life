@@ -1,7 +1,4 @@
-import countBy from 'lodash/countBy';
-import map from 'lodash/map';
-import sortBy from 'lodash/sortBy';
-import toPairs from 'lodash/toPairs';
+import {countBy,map,sortBy,toPairs} from 'lodash';
 
 import {
   Frontmatter,
