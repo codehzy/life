@@ -45,11 +45,8 @@ export default function SingleBlogPage({
   );
 
   //#region  //*=========== Link Constants ===========
-  const COMMIT_HISTORY_LINK = `https://github.com/Chocolate1999/nextjs-tailwind-blog/commits/main/src/contents/blog/${frontmatter.slug}.mdx`;
-  const GITHUB_EDIT_LINK = `https://github.com/Chocolate1999/nextjs-tailwind-blog/blob/main/src/contents/blog/${frontmatter.slug}.mdx`;
-  const OG_BANNER_LINK = `https://res.cloudinary.com/chocolate1999/image/upload/f_auto,c_fill,ar_4:5,w_1200/chocolate1999/banner/${frontmatter.banner}`;
-  //#endregion  //*======== Link Constants ===========
-
+  const COMMIT_HISTORY_LINK = `https://github.com/codehzy/life/commits/main/src/contents/blog/${frontmatter.slug}.mdx`;
+  const GITHUB_EDIT_LINK = `https://github.com/codehzy/life/blob/main/src/contents/blog/${frontmatter.slug}.mdx`;
   //#region  //*=========== Blog Language ===========
   const cleanSlug = cleanBlogPrefix(frontmatter.slug);
   //#endregion  //*======== Blog Language ===========
@@ -83,16 +80,6 @@ export default function SingleBlogPage({
 
   return (
     <Layout>
-      <Seo
-        templateTitle={frontmatter.title}
-        description={frontmatter.description}
-        isBlog
-        banner={OG_BANNER_LINK}
-        date={new Date(
-          frontmatter.lastUpdated ?? frontmatter.publishedAt
-        ).toISOString()}
-      />
-
       <main>
         <ReloadDevtool />
         <section className=''>

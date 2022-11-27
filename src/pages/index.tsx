@@ -66,7 +66,7 @@ export default function Home() {
                     )}
                     data-fade='7'
                   >
-                    一个人的命运不是自己想改变就能改变了的，至于理想，只不过是职业好坏的代名词罢了
+                    一个人的命运不是自己想改变就能改变了的，至于理想，只不过是职业好坏的代名词罢了。
                   </p>
                   <p
                     className={clsxm(

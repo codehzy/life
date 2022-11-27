@@ -5,11 +5,11 @@ const defaultMeta = {
   title: '雨后彩虹',
   siteName: '雨后彩虹',
   description:
-    'Chocolate 个人博客，JS，TS，LeetCode，Vue，React，算法爱好者。座右铭：学如逆水行舟，不进则退！',
+    '雨后彩虹 个人博客 喜爱 Vue、React、LeetCode、Next.js、TypeScript、Nest.js、MySQL',
   keywords:
-    'Chocolate 个人博客，JS，TS，LeetCode，Vue，React，算法爱好者。座右铭：学如逆水行舟，不进则退！',
+    '雨后彩虹 个人博客  喜爱 Vue、React、LeetCode、Next.js、TypeScript、Nest.js、MySQL',
   /** Without additional '/' on the end */
-  url: 'https://blog.yangchaoyi.vip',
+  url: 'https://www.codehzy.cn',
   type: 'website',
   robots: 'follow, index',
   image: 'https://help-assets.codehub.cn/enterprise/guanwang/favicon.ico',
