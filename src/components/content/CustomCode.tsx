@@ -10,7 +10,6 @@ export function Pre(props: React.ComponentPropsWithRef<'pre'>) {
         pre {
           position: relative;
           padding-top: 2.5rem;
-          width: 50vw;
         }
       `}</style>
     </pre>
