@@ -75,7 +75,7 @@ export default function Home() {
                     )}
                     data-fade='7'
                   >
-                    只有永不遏制的奋斗，才能使青春之花即便是凋谢，也是壮丽的凋谢！
+                    只有永不遏制的奋斗，才能使青春之花即便是凋谢，也是壮丽的凋谢！。
                   </p>
                 </div>
               </article>
