@@ -14,7 +14,7 @@ export const projectsAtom = atom({
         {
           title: 'monorepo',
           description:
-            '一个monorepo的小demo，配合https://juejin.cn/post/7165685038829273101博文进行学习',
+            '一个monorepo的小demo，配合https://www.codehzy.cn/blog/04_quick-monorepo博文进行学习',
           link: 'https://github.com/codehzy/monorepo',
           icon: <IoAccessibilitySharp />,
         },
