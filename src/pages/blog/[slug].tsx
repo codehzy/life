@@ -83,8 +83,8 @@ export default function SingleBlogPage({
       <main>
         <ReloadDevtool />
         <section className=''>
-          <div className='layout pt-8'>
-            <section className='grid grid-cols-[auto,334px] gap-8  mid:grid-cols-none'>
+          <div className='pt-8 layout'>
+            <section className='grid grid-cols-[auto,334px] gap-8 mid:grid-cols-none'>
               <article className='mdx prose dark:prose-invert mx-auto mt-4 w-full rounded-[8px] border border-white bg-white px-8 py-6 shadow transition-colors dark:border-gray-600 dark:bg-[#121212] mb:px-4 mb:pt-0'>
                 <span className='mt-0 block  border-b-[1px] border-solid border-b-[#eee] pb-[0.2em] text-3xl font-normal leading-normal text-[#1f2d3d] dark:border-b-gray-600	dark:text-[#fff]	dark:opacity-90'>
                   {frontmatter.title}
@@ -94,7 +94,7 @@ export default function SingleBlogPage({
                   {format(new Date(frontmatter.publishedAt), 'MMMM dd, yyyy')}
                 </p>
                 {frontmatter.lastUpdated && (
-                  <div className='mt-2 flex flex-wrap gap-2 text-sm text-gray-700 dark:text-gray-200'>
+                  <div className='flex flex-wrap gap-2 mt-2 text-sm text-gray-700 dark:text-gray-200'>
                     <span>
                       Last updated{' '}
                       {format(
@@ -116,7 +116,7 @@ export default function SingleBlogPage({
                     </UnstyledLink>
                   </div>
                 )}
-                <div className='my-2 flex items-center justify-start gap-2 text-sm font-medium text-gray-600 dark:text-gray-300'>
+                <div className='flex items-center justify-start gap-2 my-2 text-sm font-medium text-gray-600 dark:text-gray-300'>
                   <div className='flex items-center gap-1'>
                     <HiOutlineClock className='inline-block text-base' />
                     {frontmatter.readingTime.text}
@@ -175,7 +175,7 @@ export default function SingleBlogPage({
             {populatedRecommendations.length > 0 && (
               <div className='mt-20 dark:text-gray-200'>
                 <h2>Other posts that you might like</h2>
-                <ul className='mt-4 grid grid-cols-1 gap-4'>
+                <ul className='grid grid-cols-1 gap-4 mt-4'>
                   {populatedRecommendations.map((post, i) => (
                     <BlogCard
                       onClick={() => {
@@ -190,7 +190,7 @@ export default function SingleBlogPage({
               </div>
             )}
 
-            <div className='mt-8 flex flex-row-reverse items-start justify-between gap-4'>
+            <div className='flex flex-row-reverse items-start justify-between gap-4 mt-8'>
               <CustomLink href={GITHUB_EDIT_LINK}>
                 Edit this on GitHub
               </CustomLink>

@@ -10,6 +10,7 @@ export function Pre(props: React.ComponentPropsWithRef<'pre'>) {
         pre {
           position: relative;
           padding-top: 2.5rem;
+          max-width: 800px;
         }
       `}</style>
     </pre>
@@ -35,8 +36,8 @@ export default function CustomCode(props: React.ComponentPropsWithRef<'code'>) {
       )}
 
       {language && (
-        <div className='absolute top-0 left-6 rounded-b-md border border-t-0 border-gray-600 px-3 py-1'>
-          <span className='select-none bg-gradient-to-tr from-primary-300 to-primary-400 bg-clip-text font-medium'>
+        <div className='absolute top-0 px-3 py-1 border border-t-0 border-gray-600 left-6 rounded-b-md'>
+          <span className='font-medium select-none bg-gradient-to-tr from-primary-300 to-primary-400 bg-clip-text'>
             {language}
           </span>
         </div>
@@ -49,7 +50,7 @@ export default function CustomCode(props: React.ComponentPropsWithRef<'code'>) {
             setTimeout(() => setIsCopied(false), 1500);
           }}
         >
-          <button className='absolute top-2 right-2 block rounded border border-gray-600 p-2 text-lg transition-colors hover:bg-gray-700'>
+          <button className='absolute block p-2 text-lg transition-colors border border-gray-600 rounded top-2 right-2 hover:bg-gray-700'>
             {isCopied ? (
               <HiCheckCircle className='text-green-400' />
             ) : (
